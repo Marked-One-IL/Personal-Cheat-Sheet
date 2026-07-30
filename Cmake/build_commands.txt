@@ -1,0 +1,5 @@
+; Configure
+cmake -S . -B build
+
+; Compile
+cmake --build build
