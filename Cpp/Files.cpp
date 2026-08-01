@@ -15,7 +15,7 @@ static std::string read_file(const char *path)
     file.seekg(0, std::ios::beg);
 
     std::string data(static_cast<size_t>(size), '\0');
-    file.read(&data[0], size); assert(file);
+    file.read(&data[0], size);
     return data;
 }
 static std::vector<char> read_file_binary(const char *path)
@@ -30,7 +30,7 @@ static std::vector<char> read_file_binary(const char *path)
     file.seekg(0, std::ios::beg);
 
     std::vector<char> data(static_cast<size_t>(size), '\0');
-    file.read(&data[0], size); assert(file);
+    file.read(&data[0], size);
     return data;
 }
 
