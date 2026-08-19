@@ -1,0 +1,7 @@
+grep -Finrw --include="*.cpp" --include="*.hpp" "int" .
+
+-F = Literal sub string (No regex)
+-i = lowercase = uppercase
+-n = Show lines
+-r = Search in directory (Recursive)
+-w = Is a single word (Tokenized)
