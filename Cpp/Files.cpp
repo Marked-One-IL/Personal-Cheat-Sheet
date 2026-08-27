@@ -6,17 +6,7 @@
 static std::string read_file(const char *path) 
 {
     std::ifstream file(path); assert(file);
-
-    file.seekg(0, std::ios::end);
-    std::streamsize size = file.tellg();
-    if (size < 0) {
-        return std::string();
-    }
-    file.seekg(0, std::ios::beg);
-
-    std::string data(static_cast<size_t>(size), '\0');
-    file.read(&data[0], size);
-    return data;
+    return std::string(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>());
 }
 static std::vector<char> read_file_binary(const char *path)
 {
