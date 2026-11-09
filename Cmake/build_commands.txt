@@ -1,5 +1,8 @@
 ; Configure
 cmake -S . -B build
 
+; The one I should use
+cmake -S . -B build -G Ninja -D CMAKE_BUILD_TYPE=Debug
+
 ; Compile
 cmake --build build
